@@ -91,7 +91,7 @@ public class MainActivity extends AppCompatActivity {
                                 values.put(itemsSQL.usersEntry.AVATAR_URI, imageUrl);
                                 Long idUsuario = db.insert(itemsSQL.usersEntry.TABLE_NAME, itemsSQL.usersEntry._ID, values);
                                 mExampleList.add(new itemsDatos(imageUrl, firstName, lastName));
-                                Toast.makeText(getApplicationContext(),"id Usuario:"+idUsuario, Toast.LENGTH_SHORT).show();
+                                Toast.makeText(getApplicationContext(),"Se Guardo en SQLite:"+idUsuario, Toast.LENGTH_SHORT).show();
                             }
 
                             mExampleAdapter = new adapterDatos(MainActivity.this, mExampleList);
@@ -121,7 +121,7 @@ public class MainActivity extends AppCompatActivity {
         values.put(itemsSQL.usersEntry.EMAIL, email);
         values.put(itemsSQL.usersEntry.AVATAR_URI, imageUrl);
         Long idUsuario = db.insert(itemsSQL.usersEntry.TABLE_NAME, itemsSQL.usersEntry._ID, values);
-        Toast.makeText(getApplicationContext(),"id Usuario:"+idUsuario, Toast.LENGTH_SHORT).show();
+        Toast.makeText(getApplicationContext(),"Se Guardo en SQLite:"+idUsuario, Toast.LENGTH_SHORT).show();
         Log.println(3,"",idUsuario.toString());
     }
 
