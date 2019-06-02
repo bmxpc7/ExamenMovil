@@ -51,7 +51,6 @@ public class MainActivity extends AppCompatActivity {
 
         mRequestQueue = Volley.newRequestQueue(this);
         parseJSON();
-        Guardar();
     }
 
     private void parseJSON() {
